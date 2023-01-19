@@ -1,0 +1,260 @@
+@import "../../assets/scss/style.scss";
+
+
+.head {
+    position: absolute;
+    color: $neutrals  !important;
+    z-index: 100;
+}
+
+.first-component {
+    .bg-main-image {
+        position: relative;
+        top: -85px;
+        z-index: -1;
+
+        img {
+            position: relative;
+            width: 100%;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(0, 0, 0, 0.6) 100%);
+            border-radius: 0px 0px 24px 24px;
+            transform: rotate(180deg);
+        }
+
+        .text {
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $neutrals;
+            text-align: center;
+            font-weight: 700;
+            @include sm{
+                margin-top: 30px
+            }
+            .medium-text {
+                @extend .h1;
+                font-size: 45px;
+                line-height: 57px;
+                color: $neutrals;
+                @include xl{
+                    font-size: 40px;
+                }
+                @include lg{
+                    font-size: 30px;
+                }
+                @include md{
+                    font-size: 30px;
+                }
+                @include sm{
+                    font-size: 18px
+                }
+
+            }
+
+            .big-text {
+                @extend .h1;
+                font-size: 80px;
+                line-height: 101px;
+                color: $neutrals;
+                @include xl{
+                    font-size: 65px;
+                }
+                @include lg{
+                    font-size: 55px;
+                }
+                @include md{
+                    font-size: 48px;
+                }
+                @include sm{
+                    font-size: 20px;
+                    line-height: 10px;
+                }
+            }
+
+            .small-text {
+                @extend .h5;
+                font-weight: 600;
+                line-height: 24px;
+                color: $neutrals;
+                @include xl{
+                    font-size: 18px;
+                }
+                @include md{
+                    font-size: 16px;
+                }
+                @include sm{
+                    font-size: 12px
+                }
+            }
+        }
+    }
+
+    .filter-card {
+        position: relative;
+        bottom: 182px;
+        z-index: 1;
+        padding: 16px 16px 32px 32px;
+        border-color: $neutrals;
+        box-shadow: 0px 4px 16px rgba(141, 211, 187, 0.15);
+        border-radius: 16px;
+
+        @include lg {
+            bottom: 50px;
+        }
+        .nav-image{
+            @include sm{
+max-width: 20%;
+            }
+        }
+        .menu-border {
+            border-right: 1px solid #d7e2ee;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.active {
+            border-bottom: 4px solid $mint-green-light;
+        }
+
+        .form-group>label {
+            @extend .p;
+            bottom: 34px;
+            left: 15px;
+            position: relative;
+            background-color: white;
+            padding: 0px 5px 0px 5px;
+            transition: 0.2s;
+            pointer-events: none;
+        }
+
+        .form-control:focus~label {
+            bottom: 55px;
+        }
+
+        .form-control:valid~label {
+            bottom: 55px;
+        }
+    }
+}
+
+// second-component
+.second-component {
+    .trip {
+        .card {
+            background: $neutrals ;
+            box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+            border-radius: 16px;
+            border-color: $neutrals;
+
+            ul {
+                padding: 0;
+
+                li {
+
+                    width: 60px;
+                    @extend .p;
+                    margin: 10px;
+
+                    &:nth-child(1) {
+                        list-style: none;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.third-component {
+    .image-box {
+        position: relative;
+
+        @include lg {
+            margin-bottom: 20px;
+        }
+
+        .main-image {
+            height: 100%;
+            width: 100%;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                filter: drop-shadow(0px 4px 16px rgba(17, 34, 17, 0.05));
+                border-radius: 0px 0px 24px 24px;
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+            }
+        }
+
+        .text-box {
+            z-index: 2;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $neutrals  !important;
+            text-align: center;
+            width: 75%;
+
+            @include sm {
+                top: 60%;
+            }
+        }
+    }
+
+}
+
+.forth-component {
+
+
+    .card {
+        cursor: pointer;
+        box-shadow: 15px 15px $mint-green-extra-light;
+        border-radius: 20px;
+
+        .card-body {
+            .description {
+                display: -webkit-box;
+                max-width: fit-content;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .card-img{
+                border-radius: 8px;
+            }
+        }
+
+    }
+    .swiper-wrapper {
+        margin-bottom: 20px;
+    }
+    span {
+        line-height: initial
+    }
+}

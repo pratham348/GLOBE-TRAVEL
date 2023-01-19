@@ -1,0 +1,241 @@
+@import "./_variable.scss";
+@import "./mixin";
+
+@font-face {
+    font-family: 'TradeGothic LT Extended';
+    src: url('../Fonts/webfontkit-20230106-031202/trade_gothic_lt_std_extended-webfont.woff');
+    src: url('../Fonts/webfontkit-20230106-031202/trade_gothic_lt_std_extended-webfont.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'TradeGothic LT Extended';
+    background-color: #fafbfc;
+}
+
+.f-trade{
+    font-family: $font-trade;
+}
+
+.f-mont{
+    font-family: $font-mont;
+}
+
+.h1,
+h1 {
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 51px;
+    color: $blackish-green;
+    margin: 0;
+    padding: 0;
+}
+
+.h2,
+h2 {
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    color: $blackish-green;
+    margin: 0;
+    padding: 0;
+}
+
+.h3,
+h3 {
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 41px;
+    color: $blackish-green;
+    margin: 0;
+    padding: 0;
+}
+
+.h4,
+h4 {
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: $blackish-green;
+    margin: 0;
+    padding: 0;
+}
+
+.h5,
+h5 {
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: $blackish-green;
+    margin: 0;
+    padding: 0;
+}
+
+.h6,
+h6 {
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $blackish-green;
+    margin: 0;
+    padding: 0;
+}
+
+.p,
+p {
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $blackish-green;
+    // margin: 0;
+    // padding: 0;
+}
+
+.span,
+span {
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $blackish-green;
+}
+
+.small,
+small {
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: $blackish-green;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    align-items: center;
+    padding: 8px 16px;
+    background-color: $mint-green;
+    font-family: $font-mont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $blackish-green;
+    border: 1px solid $mint-green;
+
+    &:hover,
+    &:active {
+        background-color: $neutrals  !important;
+        color: $blackish-green  !important;
+        border: 1px solid $mint-green  !important;
+    }
+
+    &:disabled {
+        background-color: #D2D1D3;
+        color: $blackish-green  !important;
+    }
+    @include sm{
+        padding: 5px 10px
+    }
+}
+
+.btn-rounded {
+    @extend .btn;
+    border-radius: 4px;
+}
+
+.btn-rounded-light {
+    @extend .btn;
+    background-color: $mint-green-light;
+    border-radius: 4px;
+}
+
+.btn-square {
+    @extend .btn;
+    border-radius: 0px;
+}
+
+.btn-outline {
+    @extend .btn;
+    border: 1px solid $mint-green-extra-light;
+    border-radius: 4px;
+
+    &:hover,
+    &:active {
+        border: 1px solid $mint-green-extra-light  !important;
+    }
+
+}
+
+.bg-mint-green {
+    background-color: $mint-green;
+}
+
+.bg-blackish-green {
+    background-color: $blackish-green;
+}
+
+.bg-slamon {
+    background-color: $slamon;
+}
+
+.bg-neutrals {
+    background-color: $neutrals;
+}
+
+.bg-mint-green-light {
+    background-color: $mint-green-light;
+}
+
+.bg-mint-green-extra-light {
+    background-color: $mint-green-extra-light;
+}
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+.tx-white{
+    color: $neutrals;
+}
+.tx-black{
+    color: $blackish-green;
+}
+.match-height {
+    > [class*='col'] {
+      display: flex;
+      flex-flow: column;
+
+      > .card {
+        flex: 1 1 auto;
+      }
+    }
+  }

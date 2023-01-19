@@ -1,0 +1,237 @@
+@import "../../assets/scss/style.scss";
+
+
+nav {
+    font-family: $font-mont;
+    padding: 21px 104px;
+    align-items: center;
+    box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+
+    @include lg {
+        padding: 21px 20px;
+    }
+
+    .left-menu {
+        @include md {
+            display: none !important;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:nth-child(even) {
+                margin-left: 33.5px;
+            }
+
+
+        }
+        a.active {
+            border-bottom: 3px solid $mint-green-light;
+        }
+
+        p {
+            font-weight: 600;
+            color: $neutrals  ;
+
+        }
+
+        .icon {
+            margin-right: 4px;
+        }
+    }
+
+    .logo-img {
+        width: 110px;
+        @include sm{
+            width: 75px;
+        }
+    }
+.menu-icon{
+    @include sm{
+        width: 75px;
+    }
+}
+    .login-menu {
+        @include md {
+            display: none !important;
+        }
+
+        .btn-signup {
+            @extend .btn;
+
+            border-color: inherit;
+            padding: 15px 24px;
+            background-color: $neutrals;
+            color: $blackish-green;
+
+            &:hover {
+                background-color: $blackish-green  !important;
+                color: $neutrals  !important;
+            }
+
+        }
+
+        a {
+            text-decoration: none;
+
+            &:nth-child(even) {
+                margin-left: 33.5px;
+            }
+
+        }
+
+        p {
+            font-weight: 600;
+            color: $neutrals  ;
+        }
+
+    }
+
+    .menu-icon {
+        display: none;
+        z-index: 5;
+
+        @include md {
+            display: block !important;
+        }
+
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: 2;
+        background-color: $neutrals;
+        @include md {
+            display: block !important;
+        }
+
+        @include xll {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+footer {
+
+    .letter {
+        position: relative;
+        bottom: -151px;
+        z-index: 1;
+    }
+
+    .main-footer {
+        position: relative;
+
+        background-color: $mint-green;
+        @include sm {
+            text-align: center;
+        }
+
+        // position: relative;
+        padding: 200px 0 64px 0;
+        flex-wrap: wrap;
+
+
+        .logo-img {
+            width: 110px;
+        }
+
+        .social {
+            @include sm {
+                justify-content: center;
+            }
+        }
+
+        h6 {
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 12px;
+            opacity: 0.7;
+        }
+    }
+}
+
+.news-letter {
+    background-color: $mint-green-extra-light;
+    box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+    border-radius: 20px;
+
+    @include md {
+        .col {
+            justify-content: center;
+        }
+    }
+
+    .subscribe {
+        padding: 24px;
+
+        .big-text {
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 54px;
+
+            @include sm {
+                font-weight: 400;
+            }
+
+        }
+
+        h5 {
+            font-weight: 700;
+            opacity: 0.8;
+        }
+
+        p {
+            font-weight: 500;
+            line-height: 20px;
+            opacity: 0.7;
+        }
+
+        .subscribe-form {
+            @include md {
+                flex-direction: column !important;
+            }
+
+            button {
+                @include md {
+                    padding: 10px 20px;
+                }
+
+                @extend .btn;
+                background-color: $blackish-green;
+                color: $neutrals;
+                border-color: $blackish-green;
+                padding: 15px 24px;
+
+                &:hover {
+                    background-color: $neutrals;
+                    color: $blackish-green;
+                }
+            }
+
+            input {
+
+                @include md {
+                    width: 100% !important;
+                    margin: 10px 0;
+                    padding: 8px 20px;
+                }
+
+                &:focus {
+                    border-color: $neutrals  !important;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

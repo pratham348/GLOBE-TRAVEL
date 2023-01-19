@@ -1,0 +1,173 @@
+@import "../../assets/scss/style.scss";
+
+.flight {
+
+    .text {
+        z-index: 2;
+        position: absolute;
+        top: 300px;
+        width: 440px;
+        left: 291px;
+        transform: translate(-50%, -50%);
+        color: $neutrals;
+        text-align: left;
+        font-weight: 700;
+
+        @include md {
+            top: 220px;
+        }
+
+        @include sm {
+            top: 120px;
+            width: 300px;
+            left: 175px;
+        }
+
+        .medium-text {
+            @extend .h1;
+            font-size: 45px;
+            line-height: 57px;
+            color: $neutrals;
+
+            @include xl {
+                font-size: 40px;
+            }
+
+            @include lg {
+                font-size: 30px;
+            }
+
+            @include md {
+                font-size: 30px;
+            }
+
+            @include sm {
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+        }
+
+
+
+        .small-text {
+            @extend .h5;
+            font-weight: 600;
+            line-height: 24px;
+            color: $neutrals;
+
+            @include xl {
+                font-size: 18px;
+
+            }
+
+            @include md {
+                font-size: 16px;
+            }
+
+            @include sm {
+                font-size: 12px
+            }
+        }
+    }
+
+    .filter-card {
+        position: relative;
+        bottom: 120px;
+        z-index: 1;
+        padding: 16px 16px 32px 32px;
+        border-color: $neutrals;
+        box-shadow: 0px 4px 16px rgba(141, 211, 187, 0.15);
+        border-radius: 16px;
+
+        @include lg {
+            bottom: 50px;
+        }
+
+        .nav-image {
+            @include sm {
+                max-width: 20%;
+            }
+        }
+
+        .menu-border {
+            border-right: 1px solid #d7e2ee;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.active {
+            border-bottom: 4px solid $mint-green-light;
+        }
+
+        .form-group>label {
+            @extend .p;
+            bottom: 34px;
+            left: 15px;
+            position: relative;
+            background-color: white;
+            padding: 0px 5px 0px 5px;
+            transition: 0.2s;
+            pointer-events: none;
+        }
+
+        .form-control:focus~label {
+            bottom: 55px;
+        }
+
+        .form-control:valid~label {
+            bottom: 55px;
+        }
+    }
+
+    .maps {}
+
+    .travel-card {
+        .card-img {
+            position: relative;
+        }
+
+        .card-text {
+            position: relative;
+            top: -135px;
+            left: -10px;
+
+            @include md {
+                left: -20px;
+            }
+
+            @include sm {
+                left: -30px;
+            }
+
+            h4 {
+                @include sm {
+                    font-size: 14px;
+                }
+            }
+
+            p {
+                @include sm {
+                    font-size: 12px;
+                }
+            }
+
+            .description {
+                white-space: nowrap;
+                width: 188px;
+                overflow: hidden;
+                text-overflow: ellipsis
+            }
+
+        }
+    }
+    .travel-data{
+        margin-bottom: 250px;
+    }
+}
